@@ -1,0 +1,47 @@
+{
+  "root": true,
+  "parserOptions": {
+    "parser": "babel-eslint"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "@avalanche/eslint-config",
+    "plugin:vue/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "build/webpack.base.conf.js"
+      }
+    }
+  },
+  "rules": {
+    "import/extensions": [2, "always", {
+      "js": "never",
+      "vue": "never"
+    }],
+    "import/prefer-default-export": 0,
+    "vue/require-prop-types": 2,
+    "vue/max-attributes-per-line": [2, {
+      "singleline": 3,
+      "multiline": {
+        "max": 1,
+        "allowFirstLine": false
+      }
+    }],
+    "vue/html-self-closing": [2, {
+      "html": {
+        "void": "never",
+        "normal": "never",
+        "component": "never"
+      },
+      "svg": "never",
+      "math": "never"
+    }],
+    "vue/require-default-prop": 0
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "extends": "@avalanche/stylelint-config",
+  "processors": ["stylelint-processor-html"],
+  "rules": {
+    "max-nesting-depth": 4,
+    "no-empty-source": null
+  }
+}
