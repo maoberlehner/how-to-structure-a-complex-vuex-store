@@ -1,6 +1,6 @@
-# vuex-store-tests
+# how-to-structure-a-complex-vuex-store
 
-> A Vue.js project
+This is an example project for the following article: [How to Structure a Complex Vuex Store](https://markus.oberlehner.net/blog/how-to-structure-a-complex-vuex-store/)
 
 ## Build Setup
 
