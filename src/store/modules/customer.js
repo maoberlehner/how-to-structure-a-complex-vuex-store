@@ -22,7 +22,14 @@ const actions = {
   async [SUBMIT]({ commit, state }) {
     try {
       const customerData = createCustomer({
+        // We take only the first row here
+        // because the user is not allowed
+        // to enter more than one address
+        // (or name).
         address: state.address.rows[0],
+        // Because we allow the user to enter
+        // multiple contacts, we're sending
+        // all rows to the API.
         contacts: state.contact.rows,
         name: state.name.rows[0],
       });

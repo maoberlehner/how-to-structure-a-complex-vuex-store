@@ -91,8 +91,8 @@ const {
 
 export default {
   name: `PageCustomer`,
+  // Here we're wiring everything up.
   computed: {
-    // Here we're wiring everything up.
     ...mapCustomerState([`error`, `success`]),
     // You can read more about mapping field
     // values in two of my previous articles.
