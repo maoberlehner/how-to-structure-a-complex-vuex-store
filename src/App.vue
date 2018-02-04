@@ -34,8 +34,8 @@ html {
 }
 
 input {
-  width: 100%;
   padding: 0.5em;
+  width: 100%;
 }
 
 button {
@@ -44,9 +44,9 @@ button {
 }
 
 .app {
-  max-width: 42em;
   margin: 0 auto;
   padding: 1em 0.5em;
+  max-width: 42em;
 }
 
 .nav {
@@ -54,13 +54,13 @@ button {
   border-bottom: 1px solid;
 }
 
+.nav-item {
+  text-decoration: none;
+}
+
 .nav-item,
 .nav-item:visited {
   color: inherit;
-}
-
-.nav-item {
-  text-decoration: none;
 }
 
 .nav-item:hover,
@@ -88,8 +88,8 @@ button {
 }
 
 .form-label {
-  margin-bottom: 0.25em;
   display: block;
+  margin-bottom: 0.25em;
 }
 
 .form-button {
