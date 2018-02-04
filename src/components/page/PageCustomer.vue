@@ -71,6 +71,14 @@ import {
   mapNameFields,
 } from '../../store/modules/customer';
 
+// We're dynamically registering the
+// `customer` store module. This has
+// the benefit of only loading this
+// module, if it's actually needed.
+// Before registering the module, we're
+// checking if it's already registered
+// which can happen in combination with
+// webpacks hot reloading.
 if (!store.state.customer) store.registerModule(`customer`, customer);
 
 const {
@@ -84,7 +92,12 @@ const {
 export default {
   name: `PageCustomer`,
   computed: {
+    // Here we're wiring everything up.
     ...mapCustomerState([`error`, `success`]),
+    // You can read more about mapping field
+    // values in two of my previous articles.
+    // https://markus.oberlehner.net/blog/form-fields-two-way-data-binding-and-vuex/
+    // https://markus.oberlehner.net/blog/how-to-handle-multi-row-forms-with-vue-vuex-and-vuex-map-fields/
     ...mapNameFields([`rows[0].firstName`, `rows[0].lastName`]),
     ...mapContactMultiRowFields({ contacts: `rows` }),
     ...mapAddressFields([`rows[0].zip`, `rows[0].town`, `rows[0].street`]),

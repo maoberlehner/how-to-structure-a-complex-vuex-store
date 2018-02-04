@@ -55,6 +55,14 @@ import {
   mapContactFields,
 } from '../../store/modules/shipping-address';
 
+// We're dynamically registering the
+// `shippingAddress` store module. This
+// has the benefit of only loading this
+// module, if it's actually needed.
+// Before registering the module, we're
+// checking if it's already registered
+// which can happen in combination with
+// webpacks hot reloading.
 if (!store.state.shippingAddress) store.registerModule(`shippingAddress`, shippingAddress);
 
 const { mapActions, mapState } = createNamespacedHelpers(`shippingAddress`);
