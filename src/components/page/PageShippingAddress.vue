@@ -63,7 +63,13 @@ import {
 // checking if it's already registered
 // which can happen in combination with
 // webpacks hot reloading.
-if (!store.state.shippingAddress) store.registerModule(`shippingAddress`, shippingAddress);
+// eslint-disable-next-line no-underscore-dangle
+const shippingAddressModuleRegistered = store._modules.root._children.shippingAddress !== undefined;
+const shippingAddressStateExists = store.state.shippingAddress;
+
+if (!shippingAddressModuleRegistered) {
+  store.registerModule(`shippingAddress`, shippingAddress, { preserveState: shippingAddressStateExists });
+}
 
 const { mapActions, mapState } = createNamespacedHelpers(`shippingAddress`);
 

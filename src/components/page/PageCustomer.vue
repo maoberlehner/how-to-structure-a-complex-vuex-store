@@ -79,7 +79,11 @@ import {
 // checking if it's already registered
 // which can happen in combination with
 // webpacks hot reloading.
-if (!store.state.customer) store.registerModule(`customer`, customer);
+// eslint-disable-next-line no-underscore-dangle
+const customerModuleRegistered = store._modules.root._children.customer !== undefined;
+const customerStateExists = store.state.customer;
+
+if (!customerModuleRegistered) store.registerModule(`customer`, customer, { preserveState: customerStateExists });
 
 const {
   mapActions: mapCustomerActions,
