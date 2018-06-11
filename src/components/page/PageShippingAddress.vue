@@ -4,12 +4,14 @@
 
     <p
       v-if="success"
-      class="success">
+      class="success"
+    >
       SUCCESS!
     </p>
     <p
       v-if="error"
-      class="error">
+      class="error"
+    >
       ERROR: {{ error }}
     </p>
 
@@ -19,19 +21,27 @@
           <div class="form-element">
             <label
               for="email"
-              class="form-label">E-Mail:</label>
+              class="form-label"
+            >
+              E-Mail:
+            </label>
             <input
               id="email"
               v-model="email"
-              type="email">
+              type="email"
+            >
           </div>
           <div class="form-element">
             <label
               for="phone"
-              class="form-label">Phone:</label>
+              class="form-label"
+            >
+              Phone:
+            </label>
             <input
               id="phone"
-              v-model="phone">
+              v-model="phone"
+            >
           </div>
         </section>
 
@@ -39,33 +49,48 @@
           <div class="form-element">
             <label
               for="zip"
-              class="form-label">ZIP:</label>
+              class="form-label"
+            >
+              ZIP:
+            </label>
             <input
               id="zip"
-              v-model="zip">
+              v-model="zip"
+            >
           </div>
           <div class="form-element">
             <label
               for="town"
-              class="form-label">Town:</label>
+              class="form-label"
+            >
+              Town:
+            </label>
             <input
               id="town"
-              v-model="town">
+              v-model="town"
+            >
           </div>
           <div class="form-element">
             <label
               for="street"
-              class="form-label">Street:</label>
+              class="form-label"
+            >
+              Street:
+            </label>
             <input
               id="street"
-              v-model="street">
+              v-model="street"
+            >
           </div>
         </section>
       </div>
 
       <button
         class="form-button"
-        @click="submit">Submit</button>
+        @click="submit"
+      >
+        Submit
+      </button>
     </template>
   </div>
 </template>
