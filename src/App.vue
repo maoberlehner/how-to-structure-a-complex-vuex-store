@@ -1,14 +1,20 @@
 <template>
-  <div id="app" class="app">
+  <div
+    id="app"
+    class="app">
     <nav class="nav">
-      <router-link class="nav-item" :to="{ name: 'customer' }">
+      <router-link
+        :to="{ name: 'customer' }"
+        class="nav-item">
         New Customer
       </router-link> |
-      <router-link class="nav-item" :to="{ name: 'shipping-address' }">
+      <router-link
+        :to="{ name: 'shipping-address' }"
+        class="nav-item">
         New Shipping Address
       </router-link>
     </nav>
-    <router-view></router-view>
+    <router-view/>
   </div>
 </template>
 

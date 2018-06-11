@@ -2,10 +2,14 @@
   <div :class="$options.name">
     <h1>New Shipping Address</h1>
 
-    <p class="success" v-if="success">
+    <p
+      v-if="success"
+      class="success">
       SUCCESS!
     </p>
-    <p class="error" v-if="error">
+    <p
+      v-if="error"
+      class="error">
       ERROR: {{ error }}
     </p>
 
@@ -13,32 +17,55 @@
       <div class="form-sections">
         <section class="form-section">
           <div class="form-element">
-            <label for="email" class="form-label">E-Mail:</label>
-            <input id="email" type="email" v-model="email">
+            <label
+              for="email"
+              class="form-label">E-Mail:</label>
+            <input
+              id="email"
+              v-model="email"
+              type="email">
           </div>
           <div class="form-element">
-            <label for="phone" class="form-label">Phone:</label>
-            <input id="phone" v-model="phone">
+            <label
+              for="phone"
+              class="form-label">Phone:</label>
+            <input
+              id="phone"
+              v-model="phone">
           </div>
         </section>
 
         <section class="form-section">
           <div class="form-element">
-            <label for="zip" class="form-label">ZIP:</label>
-            <input id="zip" v-model="zip">
+            <label
+              for="zip"
+              class="form-label">ZIP:</label>
+            <input
+              id="zip"
+              v-model="zip">
           </div>
           <div class="form-element">
-            <label for="town" class="form-label">Town:</label>
-            <input id="town" v-model="town">
+            <label
+              for="town"
+              class="form-label">Town:</label>
+            <input
+              id="town"
+              v-model="town">
           </div>
           <div class="form-element">
-            <label for="street" class="form-label">Street:</label>
-            <input id="street" v-model="street">
+            <label
+              for="street"
+              class="form-label">Street:</label>
+            <input
+              id="street"
+              v-model="street">
           </div>
         </section>
       </div>
 
-      <button class="form-button" @click="submit">Submit</button>
+      <button
+        class="form-button"
+        @click="submit">Submit</button>
     </template>
   </div>
 </template>

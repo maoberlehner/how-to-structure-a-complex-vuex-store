@@ -2,10 +2,14 @@
   <div :class="$options.name">
     <h1>New Customer</h1>
 
-    <p class="success" v-if="success">
+    <p
+      v-if="success"
+      class="success">
       SUCCESS!
     </p>
-    <p class="error" v-if="error">
+    <p
+      v-if="error"
+      class="error">
       ERROR: {{ error }}
     </p>
 
@@ -13,46 +17,82 @@
       <div class="form-sections">
         <section class="form-section">
           <div class="form-element">
-            <label for="firstName" class="form-label">First name:</label>
-            <input id="firstName" v-model="firstName">
+            <label
+              for="firstName"
+              class="form-label">First name:</label>
+            <input
+              id="firstName"
+              v-model="firstName">
           </div>
           <div class="form-element">
-            <label for="lastName" class="form-label">Last name:</label>
-            <input id="lastName" v-model="lastName">
+            <label
+              for="lastName"
+              class="form-label">Last name:</label>
+            <input
+              id="lastName"
+              v-model="lastName">
           </div>
         </section>
 
         <section class="form-section">
-          <div class="form-repeatable" v-for="(contact, index) in contacts" :key="index">
+          <div
+            v-for="(contact, index) in contacts"
+            :key="index"
+            class="form-repeatable">
             <div class="form-element">
-              <label for="email" class="form-label">E-Mail:</label>
-              <input id="email" type="email" v-model="contact.email">
+              <label
+                for="email"
+                class="form-label">E-Mail:</label>
+              <input
+                id="email"
+                v-model="contact.email"
+                type="email">
             </div>
             <div class="form-element">
-              <label for="phone" class="form-label">Phone:</label>
-              <input id="phone" v-model="contact.phone">
+              <label
+                for="phone"
+                class="form-label">Phone:</label>
+              <input
+                id="phone"
+                v-model="contact.phone">
             </div>
           </div>
-          <button class="form-button" @click="addContact">Add contact</button>
+          <button
+            class="form-button"
+            @click="addContact">Add contact</button>
         </section>
 
         <section class="form-section">
           <div class="form-element">
-            <label for="zip" class="form-label">ZIP:</label>
-            <input id="zip" v-model="zip">
+            <label
+              for="zip"
+              class="form-label">ZIP:</label>
+            <input
+              id="zip"
+              v-model="zip">
           </div>
           <div class="form-element">
-            <label for="town" class="form-label">Town:</label>
-            <input id="town" v-model="town">
+            <label
+              for="town"
+              class="form-label">Town:</label>
+            <input
+              id="town"
+              v-model="town">
           </div>
           <div class="form-element">
-            <label for="street" class="form-label">Street:</label>
-            <input id="street" v-model="street">
+            <label
+              for="street"
+              class="form-label">Street:</label>
+            <input
+              id="street"
+              v-model="street">
           </div>
         </section>
       </div>
 
-      <button class="form-button" @click="submit">Submit</button>
+      <button
+        class="form-button"
+        @click="submit">Submit</button>
     </template>
   </div>
 </template>
