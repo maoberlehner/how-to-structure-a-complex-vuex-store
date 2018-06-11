@@ -7,6 +7,8 @@ const PageCustomer = () =>
   import(/* webpackChunkName: "page-personal-data" */ `../components/page/PageCustomer`);
 const PageShippingAddress = () =>
   import(/* webpackChunkName: "page-shipping-address" */ `../components/page/PageShippingAddress`);
+const PageAbout = () =>
+  import(/* webpackChunkName: "page-about" */ `../components/page/PageAbout`);
 
 export default new Router({
   routes: [
@@ -19,6 +21,11 @@ export default new Router({
       path: `/shipping-address`,
       name: `shipping-address`,
       component: PageShippingAddress,
+    },
+    {
+      path: `/about`,
+      name: `about`,
+      component: PageAbout,
     },
   ],
   mode: `history`,
